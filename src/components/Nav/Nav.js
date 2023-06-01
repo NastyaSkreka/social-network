@@ -1,12 +1,13 @@
+import { Link } from 'react-router-dom';
 import classes from './Nav.module.css'
 
 const Nav = () => {
     return <nav className = {classes.nav}>
-        <div className={classes.item}>
-            <a> Profile</a>
+        <div className={classes.item }>
+            <Link to='/profile' className={({ navData }) =>(navData ? classes.active : classes.item)}>Profile</Link>
         </div>
         <div className={classes.item}>
-            <a> Messages</a>
+            <Link to='/dialogs'  className={({ navData }) =>(navData ? classes.active : classes.item)}> Messages</Link>
         </div>
         <div className={classes.item}>
             <a> News</a>
