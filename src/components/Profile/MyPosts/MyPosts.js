@@ -6,7 +6,7 @@ let posts = [
     {id: 2, message: 'It is my first post', likesCount: 11}
 ]
 
-let postsElement = posts.map( post =>  <Post message = {post.message} />) 
+let postsElement = posts.map( post => <Post message = {post.message} />) 
 
 const MyPosts = () => {
     return (

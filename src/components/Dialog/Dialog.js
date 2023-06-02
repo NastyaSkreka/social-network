@@ -1,17 +1,6 @@
 import classes from './Dialog.module.css'
-import {Link} from 'react-router-dom'
-
-const DialogItem = (props) => {
-    let path = '/dialogs/' + props.id
-
-    return  <div className = {classes.dialog}>
-                <Link  to={path}>{props.name}</Link>
-            </div>
-}
-
-const Message = (props) => {
-    return <div className="message">{props.message}</div>
-}
+import DialogItem from './DialogItem/DialogItem.js'
+import Message from './Message/Message.js'
 
 const Dialog = () => {
 
