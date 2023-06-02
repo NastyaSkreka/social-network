@@ -6,16 +6,17 @@ import Nav from './components/Nav/Nav'
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialog/Dialog'
 
-function App() {
+function App(props) {
+
   return (
     <BrowserRouter>
     <div className = "app-wrapper">
-       <Header/> 
+       <Header/>  
         <Nav/>
         <div className = "app-wrapper-content">
         <Routes>
-            <Route path="/profile" element={<Profile/>}/>
-            <Route path="/dialogs" element={<Dialogs/>}/>
+            <Route path="/profile" element={<Profile state={props.state.profilePage}/>}/>
+            <Route path="/dialogs" element={<Dialogs state = {props.state.dialogsPage}/>}/>
         </Routes>
         </div>
     </div>
