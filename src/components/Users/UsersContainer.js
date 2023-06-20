@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import { followAC, unfollowAC,setUsersAC, setCurrentPageAC, setUsersTotalCountAC,toggleIsFetchingAC } from "../../redux/users-reducer";
-import * as axios from 'axios'
+import { follow, unfollow,setUsers, setCurrentPage, setUsersTotalCount,toggleIsFetching } from "../../redux/users-reducer";
+import axios  from 'axios'
 import  { Component } from 'react'
 import Users from './Users'
 import Preloader from "../common/Preloader/Preloader";
@@ -55,7 +55,7 @@ let mapStateToProps = (state) => {
     }
 }
 
-let mapDispathToProps = (dispatch) => {
+/*let mapDispathToProps = (dispatch) => {
     return {
         follow: (userId) => {
             dispatch(followAC(userId))
@@ -77,8 +77,8 @@ let mapDispathToProps = (dispatch) => {
         }
 
     }
-}
+}*/
 // колбєки что то диспатчат в стор, там что то происходит и в mapStateToProps приходят новые данные из стейта 
 // которые как пропсы переходят в компоненту 
 
-export default connect(mapStateToProps, mapDispathToProps)(UsersContainer)
+export default connect(mapStateToProps, {follow, unfollow, setUsers,setCurrentPage,setUsersTotalCount,toggleIsFetching})(UsersContainer)
