@@ -7,7 +7,10 @@ const Nav = () => {
             <Link to='/profile' className={({ navData }) =>(navData ? classes.active : classes.item)}>Profile</Link>
         </div>
         <div className={classes.item}>
-            <Link to='/dialogs'  className={({ navData }) =>(navData ? classes.active : classes.item)}> Messages</Link>
+            <Link to='/dialogs'  className={({ navData }) =>(navData ? classes.active : classes.item)}>Messages</Link>
+        </div>
+        <div className={classes.item}>
+            <Link to='/users'  className={({ navData }) =>(navData ? classes.active : classes.item)}>Users</Link>
         </div>
         <div className={classes.item}>
             <a> News</a>

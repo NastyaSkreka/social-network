@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import state from './redux/state.js'
+import store from './redux/store.js'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
  
 root.render(
   <React.StrictMode>
-    <App state = {state}/>
+    <App store = {store}/>
   </React.StrictMode>
 );
 

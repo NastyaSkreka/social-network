@@ -55,29 +55,7 @@ let mapStateToProps = (state) => {
     }
 }
 
-/*let mapDispathToProps = (dispatch) => {
-    return {
-        follow: (userId) => {
-            dispatch(followAC(userId))
-        },
-        unfollow: (userId) => {
-            dispatch(unfollowAC(userId))
-        },
-        setUsers: (users) => {
-            dispatch(setUsersAC(users))
-        },
-        setCurrentPage: (pageNumber) => {
-            dispatch(setCurrentPageAC(pageNumber))
-        },
-        setTotalUsersCount: (totalCount) => {
-            dispatch(setUsersTotalCountAC(totalCount))
-        }, 
-        toggleIsFetching: (isFetching) => {
-            dispatch(toggleIsFetchingAC(isFetching))
-        }
 
-    }
-}*/
 // колбєки что то диспатчат в стор, там что то происходит и в mapStateToProps приходят новые данные из стейта 
 // которые как пропсы переходят в компоненту 
 
